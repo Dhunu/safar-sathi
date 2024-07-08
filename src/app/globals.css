@@ -1,3 +1,5 @@
+@import url(https://db.onlinewebfonts.com/c/a925e24dfaad7fdbb6ce985a521560e5?family=Begum+W03+Bold);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -92,4 +94,8 @@ nav .start-contact,
 a:nth-child(3):hover ~ .animation {
     left: 150px;
     width: 60px;
+}
+
+.font-begum-w03-bold {
+    font-family: "Begum W03 Bold";
 }
