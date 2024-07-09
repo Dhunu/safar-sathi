@@ -20,7 +20,7 @@ export default function AboutUs() {
                     <h4 className="text-sm font-semibold">Who We Are</h4>
                     <p className="text-sm">
                         EcoFreight is a forward-thinking tech company dedicated
-                        to addressing one of the trucking industry's most
+                        to addressing one of the trucking industry&apos;s most
                         pressing issues: deadheading. Our team comprises
                         logistics experts, software developers, and
                         sustainability advocates who are passionate about making
@@ -33,10 +33,10 @@ export default function AboutUs() {
                     </h4>
                     <p className="text-sm">
                         We believe that every mile counts, both for your
-                        business and the planet. By using EcoFreight, you're not
-                        just improving your bottom line; you're also
-                        contributing to a more sustainable future for the
-                        logistics industry.
+                        business and the planet. By using EcoFreight,
+                        you&apos;re not just improving your bottom line;
+                        you&apos;re also contributing to a more sustainable
+                        future for the logistics industry.
                         <br />
                         Join us on our journey to drive efficiency,
                         profitability, and sustainability. Together, we can
