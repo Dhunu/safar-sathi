@@ -68,34 +68,7 @@
     }
 }
 
-nav .animation {
-    position: absolute;
-    height: 2px;
-    bottom: 0;
-    z-index: 0;
-    background: #f00;
-    border-radius: 8px;
-    transition: all 0.5s ease 0s;
-}
-
-nav .start-home,
-a:nth-child(1):hover ~ .animation {
-    left: 0;
-    width: 40px;
-}
-
-nav .start-about,
-a:nth-child(2):hover ~ .animation {
-    left: 75px;
-    width: 45px;
-}
-
-nav .start-contact,
-a:nth-child(3):hover ~ .animation {
-    left: 150px;
-    width: 60px;
-}
-
-.font-begum-w03-bold {
-    font-family: "Begum W03 Bold";
+.text-xxs {
+    font-size: 0.5rem;
+    line-height: 0.75rem;
 }
