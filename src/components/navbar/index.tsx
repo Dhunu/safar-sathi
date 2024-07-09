@@ -20,7 +20,7 @@ export default function Navbar() {
                     width={60}
                     height={20}
                     alt="logo-text"
-                    className="py-2 object-cover"
+                    className="py-2 object-cover hidden sm:block"
                 />
             </div>
             <NavLinks />

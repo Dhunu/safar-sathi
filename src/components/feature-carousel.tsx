@@ -1,18 +1,15 @@
 "use client";
 
-import Autoplay from "embla-carousel-autoplay";
-
 import { Card, CardContent } from "@/components/ui/card";
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
 } from "@/components/ui/carousel";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
+import CardTransition from "./card-transition";
 
 const cardContent = [
     {
@@ -51,7 +48,11 @@ const cardContent = [
 
 export default function FeatureCarousel() {
     return (
-        <Carousel opts={{ align: "start" }} className="w-full">
+        <Carousel
+            opts={{ align: "start" }}
+            className="w-full"
+            orientation="horizontal"
+        >
             <CarouselContent>
                 {cardContent.map((content, index) => (
                     <CarouselItem
@@ -63,26 +64,28 @@ export default function FeatureCarousel() {
                         )}
                     >
                         <Link href={content.link}>
-                            <Card className="h-[70vh] border-[3px]">
-                                <CardContent className="flex aspect-square items-end justify-center p-0 h-full w-full relative">
-                                    <Image
-                                        src={content.image}
-                                        alt={content.title}
-                                        height={1000}
-                                        width={500}
-                                        className="object-cover w-full h-full absolute z-0"
-                                    />
-                                    <div className="w-full h-full bg-gradient-to-t from-[#000] via-[#000] to-background/40 z-10 opacity-60 absolute" />
-                                    <div className="flex flex-col p-5">
-                                        <h2 className="text-4xl  z-20 h-20 text-background w-2/3 font-begum-w03-bold">
-                                            {content.title}
-                                        </h2>
-                                        <p className=" z-20 h-16 text-sm text-muted">
-                                            {content.description}
-                                        </p>
-                                    </div>
-                                </CardContent>
-                            </Card>
+                            <CardTransition delay={index * 0.65}>
+                                <Card className="h-[70vh] border-[3px]">
+                                    <CardContent className="flex aspect-square items-end justify-center p-0 h-full w-full relative">
+                                        <Image
+                                            src={content.image}
+                                            alt={content.title}
+                                            height={1000}
+                                            width={500}
+                                            className="object-cover w-full h-full absolute z-0"
+                                        />
+                                        <div className="w-full h-full bg-gradient-to-t from-[#000] via-[#000] to-transparent z-10 opacity-60 absolute" />
+                                        <div className="flex flex-col p-5">
+                                            <h2 className="text-4xl  z-20 h-20 text-background w-2/3 font-begum-w03-bold">
+                                                {content.title}
+                                            </h2>
+                                            <p className=" z-20 h-16 text-sm text-muted">
+                                                {content.description}
+                                            </p>
+                                        </div>
+                                    </CardContent>
+                                </Card>
+                            </CardTransition>
                         </Link>
                     </CarouselItem>
                 ))}

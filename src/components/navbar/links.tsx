@@ -13,7 +13,7 @@ const links = [
 export default function NavLinks() {
     const pathname = usePathname();
     return (
-        <div className="flex gap-5 text-primary relative">
+        <div className="gap-5 text-primary relative hidden sm:flex">
             {links.map(({ href, text }) => (
                 <Link
                     key={href}
