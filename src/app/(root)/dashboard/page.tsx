@@ -8,6 +8,7 @@ import {
     FaAngleRight,
 } from "react-icons/fa6";
 import { FiBox } from "react-icons/fi";
+import { MdVerified } from "react-icons/md";
 
 import { Button } from "@/components/ui/button";
 
@@ -21,7 +22,7 @@ export default function Dashboard() {
                             Your Current Status
                         </h2>
                         <div className="flex gap-4">
-                            <div className="flex flex-col items-center">
+                            <div className="flex flex-col items-center relative">
                                 <Image
                                     src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                                     alt="profile"
@@ -29,7 +30,9 @@ export default function Dashboard() {
                                     width={100}
                                     className="rounded-full object-cover w-24 h-24"
                                 />
+
                                 <h2 className="text-lg font-semibold">Kamal</h2>
+                                <MdVerified className="h-5 w-5 text-green-500 absolute top-1 left-1" />
                             </div>
                             <div className="flex">
                                 <div className="flex flex-col gap-1 w-36">
@@ -68,7 +71,15 @@ export default function Dashboard() {
                         <h2 className="font-semibold text-base text-primary h-6">
                             Your Current Route
                         </h2>
-                        <div className="w-full h-[calc(100%-24px)] min-h-36 rounded-lg bg-primary"></div>
+                        <div className="w-full h-[calc(100%-24px)] min-h-36">
+                            <Image
+                                src="/images/map.png"
+                                width={1000}
+                                height={500}
+                                alt="map"
+                                className="w-full h-full object-cover rounded-lg"
+                            />
+                        </div>
                     </div>
                     <div className="w-full rounded-lg bg-primary p-4 text-sm font-extralight text-[#FFF0B6] divide-y-[2px] divide-dotted divide-[#FFF0B6]/30 ">
                         <div className="flex justify-between w-full pb-2 text-white">
@@ -265,6 +276,9 @@ export default function Dashboard() {
                         <div className="absolute bottom-0 right-0 translate-y-5 text-xs font-semibold flex items-center">
                             Show All
                             <FaAngleRight className="h-3 w-3" />
+                        </div>
+                        <div className="absolute w-10 h-10 -top-2 -right-2 bg-primary text-white flex justify-center items-center text-lg font-semibold rounded-full">
+                            +6
                         </div>
                     </div>
                     <div className="w-full p-4 flex flex-col bg-[#FFF0B6] rounded-lg relative text-primary mt-5 gap-5">
