@@ -15,7 +15,6 @@ export default function CardTransition({
 }) {
     const [page, setPage] = useState<string | undefined>(undefined);
     const pathname = usePathname();
-    
 
     useEffect(() => {
         const renderedPages = localStorage.getItem("renderedPages");
@@ -29,7 +28,7 @@ export default function CardTransition({
         } else {
             setPage(pathname);
         }
-    }, []);
+    }, [pathname]);
     if (page === undefined) {
         return (
             <motion.div

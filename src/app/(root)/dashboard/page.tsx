@@ -13,6 +13,12 @@ import { MdVerified } from "react-icons/md";
 import { Button } from "@/components/ui/button";
 import CardTransition from "@/components/card-transition";
 import Transition from "@/components/transition";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Dashboard",
+    description: "See all your details in one place",
+};
 
 export default function Dashboard() {
     return (

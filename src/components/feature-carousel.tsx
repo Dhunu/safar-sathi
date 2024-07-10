@@ -76,7 +76,7 @@ export default function FeatureCarousel() {
                                         />
                                         <div className="w-full h-full bg-gradient-to-t from-[#000] via-[#000] to-transparent z-10 opacity-60 absolute" />
                                         <div className="flex flex-col p-5">
-                                            <h2 className="text-4xl  z-20 h-20 text-background w-2/3 font-begum-w03-bold">
+                                            <h2 className="text-5xl  z-20 h-28 text-background w-2/3 font-begum-w03-bold">
                                                 {content.title}
                                             </h2>
                                             <p className=" z-20 h-16 text-sm text-muted">

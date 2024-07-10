@@ -1,6 +1,12 @@
 import CardTransition from "@/components/card-transition";
 import Transition from "@/components/transition";
-import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "About Us",
+    description:
+        "Safar Sathi is a forward-thinking tech company dedicated to addressing one of the trucking industry's most pressing issues: deadheading.",
+};
 
 export default function AboutUs() {
     return (
@@ -14,14 +20,14 @@ export default function AboutUs() {
                                 Our Mission
                             </h4>
                             <p className="text-sm">
-                                At EcoFreight, we are committed to
-                                revolutionizing the logistics industry by
-                                reducing deadheading and promoting sustainable
-                                transportation. Our mission is to create a
-                                seamless and efficient trucking network that
-                                minimizes empty miles, maximizes resource
-                                utilization, and benefits both truck drivers and
-                                shippers.
+                                At <span className="font-bold">SafarSathi</span>
+                                , we are committed to revolutionizing the
+                                logistics industry by reducing deadheading and
+                                promoting sustainable transportation. Our
+                                mission is to create a seamless and efficient
+                                trucking network that minimizes empty miles,
+                                maximizes resource utilization, and benefits
+                                both truck drivers and shippers.
                             </p>
                         </div>
                         <div>
@@ -29,14 +35,14 @@ export default function AboutUs() {
                                 Who We Are
                             </h4>
                             <p className="text-sm">
-                                EcoFreight is a forward-thinking tech company
-                                dedicated to addressing one of the trucking
-                                industry&apos;s most pressing issues:
-                                deadheading. Our team comprises logistics
-                                experts, software developers, and sustainability
-                                advocates who are passionate about making a
-                                positive impact on the environment and the
-                                economy.
+                                <span className="font-bold">SafarSathi</span> is
+                                a forward-thinking tech company dedicated to
+                                addressing one of the trucking industry&apos;s
+                                most pressing issues: deadheading. Our team
+                                comprises logistics experts, software
+                                developers, and sustainability advocates who are
+                                passionate about making a positive impact on the
+                                environment and the economy.
                             </p>
                         </div>
                         <div>
@@ -45,7 +51,8 @@ export default function AboutUs() {
                             </h4>
                             <p className="text-sm">
                                 We believe that every mile counts, both for your
-                                business and the planet. By using EcoFreight,
+                                business and the planet. By using{" "}
+                                <span className="font-bold">SafarSathi</span>,
                                 you&apos;re not just improving your bottom line;
                                 you&apos;re also contributing to a more
                                 sustainable future for the logistics industry.
@@ -63,13 +70,13 @@ export default function AboutUs() {
                         <h2 className="text-base font-bold">Contact Us</h2>
                         <p className="text-sm font-semibold">
                             For more information or to get started with{" "}
-                            <span className="font-bold">Safar Sathi</span>,
+                            <span className="font-bold">SafarSathi</span>,
                             contact us at:
                         </p>
                         <ul className="text-sm list-disc translate-x-5">
                             <li>
                                 <span className="font-semibold">Email:</span>{" "}
-                                developer@aneglsaikia.com
+                                developer@angelsaikia.com
                             </li>
                             <li>
                                 <span className="font-semibold">Phone:</span>{" "}

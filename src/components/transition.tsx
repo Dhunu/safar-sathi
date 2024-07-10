@@ -6,7 +6,6 @@ import { ReactNode, useEffect } from "react";
 
 export default function Transition({ children }: { children: ReactNode }) {
     const pathname = usePathname();
-    
 
     useEffect(() => {
         const renderedPages = localStorage.getItem("renderedPages");
@@ -21,7 +20,7 @@ export default function Transition({ children }: { children: ReactNode }) {
                 renderedPages ? `${renderedPages},${pathname}` : pathname
             );
         }
-    },[])
+    }, [pathname]);
     return (
         <motion.div
             initial="hidden"
