@@ -8,6 +8,11 @@ export default function Transition({ children }: { children: ReactNode }) {
     const pathname = usePathname();
 
     useEffect(() => {
+        window.onbeforeunload = function () {
+            localStorage.removeItem("renderedPages");
+        };
+    }, []);
+    useEffect(() => {
         const renderedPages = localStorage.getItem("renderedPages");
 
         const pageRendered = renderedPages

@@ -5,13 +5,13 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
     title: "About Us",
     description:
-        "Safar Sathi is a forward-thinking tech company dedicated to addressing one of the trucking industry's most pressing issues: deadheading.",
+        "Saफर सathi is a forward-thinking tech company dedicated to addressing one of the trucking industry's most pressing issues: deadheading.",
 };
 
 export default function AboutUs() {
     return (
         <Transition>
-            <div className="max-w-screen-lg mx-auto pb-10 pt-20 px-10 flex flex-col text-primary gap-32">
+            <div className="max-w-screen-lg mx-auto p-10  sm:pt-20 flex flex-col text-primary gap-32">
                 <CardTransition>
                     <div className="flex flex-col gap-5">
                         <h2 className="text-base font-bold">About Us</h2>
@@ -20,7 +20,7 @@ export default function AboutUs() {
                                 Our Mission
                             </h4>
                             <p className="text-sm">
-                                At <span className="font-bold">SafarSathi</span>
+                                At <span className="font-bold">Saफर सathi</span>
                                 , we are committed to revolutionizing the
                                 logistics industry by reducing deadheading and
                                 promoting sustainable transportation. Our
@@ -35,7 +35,7 @@ export default function AboutUs() {
                                 Who We Are
                             </h4>
                             <p className="text-sm">
-                                <span className="font-bold">SafarSathi</span> is
+                                <span className="font-bold">Saफर सathi</span> is
                                 a forward-thinking tech company dedicated to
                                 addressing one of the trucking industry&apos;s
                                 most pressing issues: deadheading. Our team
@@ -52,7 +52,7 @@ export default function AboutUs() {
                             <p className="text-sm">
                                 We believe that every mile counts, both for your
                                 business and the planet. By using{" "}
-                                <span className="font-bold">SafarSathi</span>,
+                                <span className="font-bold">Saफर सathi</span>,
                                 you&apos;re not just improving your bottom line;
                                 you&apos;re also contributing to a more
                                 sustainable future for the logistics industry.
@@ -68,9 +68,9 @@ export default function AboutUs() {
                 <CardTransition delay={0.65}>
                     <div className="flex flex-col">
                         <h2 className="text-base font-bold">Contact Us</h2>
-                        <p className="text-sm font-semibold">
+                        <p className="text-sm">
                             For more information or to get started with{" "}
-                            <span className="font-bold">SafarSathi</span>,
+                            <span className="font-bold">Saफर सathi</span>,
                             contact us at:
                         </p>
                         <ul className="text-sm list-disc translate-x-5">

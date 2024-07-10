@@ -1,9 +1,8 @@
-import { HiTruck } from "react-icons/hi2";
-
-import Logo from "../logo";
 import Link from "next/link";
-import NavLinks from "./links";
 import Image from "next/image";
+
+import MobileMenu from "./mobile-menu";
+import NavLinks from "./links";
 
 export default function Navbar() {
     return (
@@ -24,6 +23,7 @@ export default function Navbar() {
                 />
             </Link>
             <NavLinks />
+            <MobileMenu />
         </nav>
     );
 }

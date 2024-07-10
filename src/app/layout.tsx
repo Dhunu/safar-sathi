@@ -12,8 +12,8 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
     title: {
-        default: "Safar Sathi",
-        template: "%s | Safar Sathi",
+        default: "Saफर सathi",
+        template: "%s | Saफर सathi",
     },
     description: "Plan and manage your trips with ease.",
     icons: "/images/icon.svg",

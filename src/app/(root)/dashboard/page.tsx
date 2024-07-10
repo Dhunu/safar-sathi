@@ -89,7 +89,7 @@ export default function Dashboard() {
                             </div>
                         </CardTransition>
 
-                        <CardTransition delay={0.45} className="w-full h-full">
+                        <CardTransition delay={0.1} className="w-full h-full">
                             <div className="w-full  h-full">
                                 <h2 className="font-semibold text-base text-primary h-6">
                                     Your Current Route
@@ -106,7 +106,7 @@ export default function Dashboard() {
                             </div>
                         </CardTransition>
 
-                        <CardTransition delay={0.9}>
+                        <CardTransition delay={0.2}>
                             <div className="w-full rounded-lg bg-primary p-4 text-sm font-extralight text-[#FFF0B6] divide-y-[2px] divide-dotted divide-[#FFF0B6]/30 ">
                                 <div className="flex justify-between w-full pb-2 text-white">
                                     <p>Total Distance</p>
@@ -122,7 +122,7 @@ export default function Dashboard() {
                             </div>
                         </CardTransition>
                     </div>
-                    <CardTransition className="h-full">
+                    <CardTransition className="h-full" delay={0.3}>
                         <div className="w-full h-full flex flex-col bg-primary rounded-lg p-8 text-white">
                             <p className="text-sm font-extralight text-center w-full mb-5">
                                 Your Info
@@ -246,7 +246,7 @@ export default function Dashboard() {
                         </div>
                     </CardTransition>
                     <div className="w-full flex flex-col gap-5 md:col-span-2 2xl:col-span-1">
-                        <CardTransition>
+                        <CardTransition delay={0.4}>
                             <div className="w-full p-4 flex flex-col bg-[#FFF0B6] rounded-lg relative">
                                 <div className="flex gap-2 items-center text-primary">
                                     <FaLocationCrosshairs />
@@ -296,7 +296,7 @@ export default function Dashboard() {
                                 </div>
                             </div>
                         </CardTransition>
-                        <CardTransition className="h-full" delay={0.45}>
+                        <CardTransition className="h-full" delay={0.5}>
                             <div className="w-full p-4 flex flex-col bg-[#FFF0B6] rounded-lg relative text-primary h-full">
                                 <div className="flex justify-between">
                                     <div className="flex flex-col">
@@ -340,7 +340,7 @@ export default function Dashboard() {
                                 </div>
                             </div>
                         </CardTransition>
-                        <CardTransition delay={0.9}>
+                        <CardTransition delay={0.6}>
                             <div className="w-full p-4 flex flex-col bg-[#FFF0B6] rounded-lg relative text-primary mt-5 gap-5">
                                 <h2 className="text-base font-semibold">
                                     Want to Optimise Your Route?
