@@ -1,14 +1,32 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
+import { usePathname } from "next/navigation";
+import { ReactNode, useEffect } from "react";
 
 export default function Transition({ children }: { children: ReactNode }) {
+    const pathname = usePathname();
+    
+
+    useEffect(() => {
+        const renderedPages = localStorage.getItem("renderedPages");
+
+        const pageRendered = renderedPages
+            ?.split(",")
+            .find((page) => page === pathname);
+
+        if (pageRendered === undefined) {
+            localStorage.setItem(
+                "renderedPages",
+                renderedPages ? `${renderedPages},${pathname}` : pathname
+            );
+        }
+    },[])
     return (
         <motion.div
-            initial={{ y: 50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ ease: "easeInOut", duration: 0.75 }}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
         >
             {children}
         </motion.div>
