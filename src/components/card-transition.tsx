@@ -33,7 +33,6 @@ export default function CardTransition({
         return (
             <motion.div
                 initial={{ y: 50, opacity: 0 }}
-                // animate={{ y: 0, opacity: 1 }}
                 transition={{ ease: "easeInOut", duration: 0.75, delay }}
                 viewport={{ once: true }}
                 className={className}

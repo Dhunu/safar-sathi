@@ -2,6 +2,7 @@
 
 import { TbMenuDeep } from "react-icons/tb";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import {
     Sheet,
@@ -9,11 +10,10 @@ import {
     SheetContent,
     SheetHeader,
     SheetTrigger,
-} from "../ui/sheet";
-import Logo from "../logo";
+} from "@/components/ui/sheet";
+import Logo from "@/components/logo";
 import { navLinks } from "@/constants";
 import { cn } from "@/lib/utils";
-import { usePathname } from "next/navigation";
 
 export default function MobileMenu() {
     const pathname = usePathname();

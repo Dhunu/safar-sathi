@@ -17,13 +17,13 @@
         --secondary: 0 0% 20%;
         --secondary-foreground: 0 100% 100%;
         --muted: 48 100% 86%;
-        --muted-foreground: 0 0% 40%;
+        --muted-foreground: 7 64% 80%;
         --accent: 7 64% 56%;
         --accent-foreground: 0 100% 100%;
         --destructive: 7 64% 56%;
         --destructive-foreground: 0 100% 100%;
         --border: 7 64% 56%;
-        --input: 52 100% 94%;
+        --input: 7 64% 56%;
         --ring: 7 64% 56%;
         --radius: 0.5rem;
     }
@@ -75,4 +75,8 @@
 .text-xxs {
     font-size: 0.5rem;
     line-height: 0.75rem;
+}
+
+.custom-shadow {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }

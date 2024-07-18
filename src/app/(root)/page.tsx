@@ -1,5 +1,5 @@
-import FeatureCarousel from "@/components/feature-carousel";
-import MobileCardView from "@/components/mobile-card-view";
+import FeatureCarousel from "@/components/home/feature-carousel";
+import MobileCardView from "@/components/home/mobile-card-view";
 import Transition from "@/components/transition";
 
 export default function Home() {

@@ -4,6 +4,12 @@ export const navLinks = [
     { href: "/about-us", text: "About Us" },
 ];
 
+export const featuredLinks = [
+    { href: "/", text: "Home" },
+    { href: "/about-us", text: "About Us" },
+    { href: "/help", text: "Help" },
+];
+
 export const homeCardContent = [
     {
         title: "Load Board",
@@ -36,5 +42,56 @@ export const homeCardContent = [
         description: "Access forums and customer support resources.",
         image: "/images/support-n-community.jpg",
         link: "/support",
+    },
+];
+
+export const loads = [
+    {
+        name: "Woods",
+        image: "/images/woods.jpg",
+        deliveryDate: "11-07-2024",
+        loadType: "Flatbed",
+        destination: "New York",
+        weight: "20,000 lbs",
+    },
+    {
+        name: "Steel",
+        image: "/images/steel.jpg",
+        deliveryDate: "13-08-2024",
+        loadType: "Reefer",
+        destination: "California",
+        weight: "30,000 lbs",
+    },
+    {
+        name: "Grains",
+        image: "/images/grains.jpg",
+        deliveryDate: "15-09-2024",
+        loadType: "Dry Van",
+        destination: "Texas",
+        weight: "40,000 lbs",
+    },
+    {
+        name: "Fruits (Delicate)",
+        image: "/images/fruits.jpg",
+        deliveryDate: "17-10-2024",
+        loadType: "Flatbed",
+        destination: "Florida",
+        weight: "10,000 lbs",
+    },
+    {
+        name: "Electronics",
+        image: "/images/electronics.jpg",
+        deliveryDate: "19-11-2024",
+        loadType: "Reefer",
+        destination: "Washington",
+        weight: "60,000 lbs",
+    },
+    {
+        name: "Cars",
+        image: "/images/cars.jpg",
+        deliveryDate: "21-12-2024",
+        loadType: "Dry Van",
+        destination: "Colorado",
+        weight: "70,000 lbs",
     },
 ];
