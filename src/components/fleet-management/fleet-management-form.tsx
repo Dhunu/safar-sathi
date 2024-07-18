@@ -21,6 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "../ui/label";
 
 import { CustomInput } from "../custom-input";
+import CardTransition from "../card-transition";
 
 const formSchema = z.object({
     total_trip_cost: z.coerce.number().nonnegative(),
@@ -66,171 +67,185 @@ export default function FleetManagementForm() {
                 className="space-y-6 my-5 sm:my-10 text-primary"
                 onSubmit={form.handleSubmit(onSubmit)}
             >
-                <FormField
-                    control={form.control}
-                    name="total_trip_cost"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormControl>
-                                <CustomInput
-                                    {...field}
-                                    label="Total Trip Cost"
-                                    icon={<FaDollarSign />}
-                                    placeholder="Enter trip cost"
-                                    type="number"
+                <CardTransition>
+                    <FormField
+                        control={form.control}
+                        name="total_trip_cost"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormControl>
+                                    <CustomInput
+                                        {...field}
+                                        label="Total Trip Cost"
+                                        icon={<FaDollarSign />}
+                                        placeholder="Enter trip cost"
+                                        type="number"
+                                    />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                </CardTransition>
+                <CardTransition>
+                    <div className="flex flex-col">
+                        <Label className="underline font-semibold">
+                            Trip Details
+                        </Label>
+                        <div className="space-y-6 mt-2">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10">
+                                <FormField
+                                    control={form.control}
+                                    name="start_location"
+                                    render={({ field }) => (
+                                        <FormItem className="w-full">
+                                            <FormControl>
+                                                <CustomInput
+                                                    {...field}
+                                                    label="Start Location"
+                                                    labelClassName="font-normal"
+                                                    placeholder="City/location"
+                                                />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
                                 />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <div className="flex flex-col">
-                    <Label className="underline font-semibold">
-                        Trip Details
-                    </Label>
-                    <div className="space-y-6 mt-2">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10">
-                            <FormField
-                                control={form.control}
-                                name="start_location"
-                                render={({ field }) => (
-                                    <FormItem className="w-full">
-                                        <FormControl>
-                                            <CustomInput
-                                                {...field}
-                                                label="Start Location"
-                                                labelClassName="font-normal"
-                                                placeholder="City/location"
-                                            />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
-                            <FormField
-                                control={form.control}
-                                name="start_location"
-                                render={({ field }) => (
-                                    <FormItem className="w-full">
-                                        <FormControl>
-                                            <CustomInput
-                                                {...field}
-                                                label="Start Location"
-                                                labelClassName="font-normal"
-                                                placeholder="City/location"
-                                            />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
+                                <FormField
+                                    control={form.control}
+                                    name="start_location"
+                                    render={({ field }) => (
+                                        <FormItem className="w-full">
+                                            <FormControl>
+                                                <CustomInput
+                                                    {...field}
+                                                    label="Start Location"
+                                                    labelClassName="font-normal"
+                                                    placeholder="City/location"
+                                                />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <FormField
-                    control={form.control}
-                    name="route_information"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormLabel>Route Information</FormLabel>
-                            <FormControl>
-                                <CustomInput
-                                    {...field}
-                                    label="Total Trip Cost"
-                                    icon={<FaRoute />}
-                                    placeholder="Pickup Location"
+                </CardTransition>
+                <CardTransition>
+                    <FormField
+                        control={form.control}
+                        name="route_information"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormLabel>Route Information</FormLabel>
+                                <FormControl>
+                                    <CustomInput
+                                        {...field}
+                                        label="Total Trip Cost"
+                                        icon={<FaRoute />}
+                                        placeholder="Pickup Location"
+                                    />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                </CardTransition>
+                <CardTransition>
+                    <div className="flex flex-col">
+                        <Label className="underline font-semibold">
+                            Load Details
+                        </Label>
+                        <div className="space-y-6 mt-2">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10">
+                                <FormField
+                                    control={form.control}
+                                    name="cargo_type"
+                                    render={({ field }) => (
+                                        <FormItem className="w-full">
+                                            <FormControl>
+                                                <CustomInput
+                                                    {...field}
+                                                    label="Cargo Type"
+                                                    labelClassName="font-normal"
+                                                    icon={<BsTruckFlatbed />}
+                                                    placeholder="Cargo Type"
+                                                />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
                                 />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <div className="flex flex-col">
-                    <Label className="underline font-semibold">
-                        Load Details
-                    </Label>
-                    <div className="space-y-6 mt-2">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-10">
-                            <FormField
-                                control={form.control}
-                                name="cargo_type"
-                                render={({ field }) => (
-                                    <FormItem className="w-full">
-                                        <FormControl>
-                                            <CustomInput
-                                                {...field}
-                                                label="Cargo Type"
-                                                labelClassName="font-normal"
-                                                icon={<BsTruckFlatbed />}
-                                                placeholder="Cargo Type"
-                                            />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
-                            <FormField
-                                control={form.control}
-                                name="quantity"
-                                render={({ field }) => (
-                                    <FormItem className="w-full">
-                                        <FormControl>
-                                            <CustomInput
-                                                {...field}
-                                                label="Quantity"
-                                                labelClassName="font-normal"
-                                                icon={
-                                                    <MdProductionQuantityLimits />
-                                                }
-                                                placeholder="Quantity"
-                                                type="number"
-                                            />
-                                        </FormControl>
-                                        <FormMessage />
-                                    </FormItem>
-                                )}
-                            />
+                                <FormField
+                                    control={form.control}
+                                    name="quantity"
+                                    render={({ field }) => (
+                                        <FormItem className="w-full">
+                                            <FormControl>
+                                                <CustomInput
+                                                    {...field}
+                                                    label="Quantity"
+                                                    labelClassName="font-normal"
+                                                    icon={
+                                                        <MdProductionQuantityLimits />
+                                                    }
+                                                    placeholder="Quantity"
+                                                    type="number"
+                                                />
+                                            </FormControl>
+                                            <FormMessage />
+                                        </FormItem>
+                                    )}
+                                />
+                            </div>
                         </div>
                     </div>
-                </div>
-                <FormField
-                    control={form.control}
-                    name="item_weight"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormControl>
-                                <CustomInput
-                                    {...field}
-                                    label="Item Weight"
-                                    icon={<FaWeightScale />}
-                                    placeholder="Item Weight in Tons"
-                                    type="number"
-                                />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <FormField
-                    control={form.control}
-                    name="shift_schedule"
-                    render={({ field }) => (
-                        <FormItem>
-                            <FormControl>
-                                <CustomInput
-                                    {...field}
-                                    label="Item Weight"
-                                    icon={<IoIosTimer />}
-                                    placeholder="Prefence Shift Schedule"
-                                />
-                            </FormControl>
-                            <FormMessage />
-                        </FormItem>
-                    )}
-                />
-                <Button type="submit" className="w-full">
-                    Optimise
-                </Button>
+                </CardTransition>
+                <CardTransition>
+                    <FormField
+                        control={form.control}
+                        name="item_weight"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormControl>
+                                    <CustomInput
+                                        {...field}
+                                        label="Item Weight"
+                                        icon={<FaWeightScale />}
+                                        placeholder="Item Weight in Tons"
+                                        type="number"
+                                    />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                </CardTransition>
+                <CardTransition>
+                    <FormField
+                        control={form.control}
+                        name="shift_schedule"
+                        render={({ field }) => (
+                            <FormItem>
+                                <FormControl>
+                                    <CustomInput
+                                        {...field}
+                                        label="Item Weight"
+                                        icon={<IoIosTimer />}
+                                        placeholder="Prefence Shift Schedule"
+                                    />
+                                </FormControl>
+                                <FormMessage />
+                            </FormItem>
+                        )}
+                    />
+                </CardTransition>
+                <CardTransition>
+                    <Button type="submit" className="w-full">
+                        Optimise
+                    </Button>
+                </CardTransition>
             </form>
         </Form>
     );
