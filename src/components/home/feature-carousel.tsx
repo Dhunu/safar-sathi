@@ -11,8 +11,22 @@ import Link from "next/link";
 import Image from "next/image";
 import CardTransition from "@/components/card-transition";
 import { homeCardContent } from "@/constants";
+import { useEffect, useState } from "react";
 
 export default function FeatureCarousel() {
+    const [windowWidth, setWindowWidth] = useState(0);
+
+    useEffect(() => {
+        setWindowWidth(window.innerWidth);
+        window.addEventListener("resize", () => {
+            setWindowWidth(window.innerWidth);
+        });
+        return () => {
+            window.removeEventListener("resize", () => {
+                setWindowWidth(window.innerWidth);
+            });
+        };
+    }, []);
     return (
         <Carousel
             opts={{ align: "start" }}
@@ -24,14 +38,24 @@ export default function FeatureCarousel() {
                     <CarouselItem
                         key={index}
                         className={cn(
-                            "basis-1/2 md:basis-1/3 lg:basis-1/4",
+                            "basis-1/2 md:basis-1/3 xl:basis-1/4",
                             index === 0 && "ml-10 md:ml-20",
                             index === homeCardContent.length - 1 &&
                                 "mr-10 md:mr-20"
                         )}
                     >
                         <Link href={content.link}>
-                            <CardTransition delay={index * 0.65}>
+                            <CardTransition
+                                delay={
+                                    windowWidth < 768 && index < 2
+                                        ? index * 0.65
+                                        : windowWidth < 1280 && index < 3
+                                          ? index * 0.65
+                                          : windowWidth >= 1280 && index < 4
+                                            ? index * 0.65
+                                            : 0
+                                }
+                            >
                                 <Card className="h-[70vh] border-[3px]">
                                     <CardContent className="flex aspect-square items-end justify-center p-0 h-full w-full relative">
                                         <Image

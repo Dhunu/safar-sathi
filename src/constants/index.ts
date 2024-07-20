@@ -95,3 +95,61 @@ export const loads = [
         weight: "70,000 lbs",
     },
 ];
+
+export interface requestType {
+    application_no: string;
+    pickup: string;
+    destination: string;
+    date_and_time: string;
+    category: string;
+    driver_min_star: number;
+    trip_distance: number;
+}
+
+export const requests: requestType[] = [
+    {
+        application_no: "123456",
+        pickup: "Delhi",
+        destination: "Assam",
+        date_and_time: "2024-07-11 - 12:00:00",
+        category: "Vegetables",
+        driver_min_star: 4,
+        trip_distance: 2000,
+    },
+    {
+        application_no: "789012",
+        pickup: "Mumbai",
+        destination: "Chennai",
+        date_and_time: "2024-08-13 - 10:30:00",
+        category: "Electronics",
+        driver_min_star: 3,
+        trip_distance: 1500,
+    },
+    {
+        application_no: "345678",
+        pickup: "Kolkata",
+        destination: "Bangalore",
+        date_and_time: "2024-09-15 - 14:45:00",
+        category: "Furniture",
+        driver_min_star: 4,
+        trip_distance: 1800,
+    },
+    {
+        application_no: "901234",
+        pickup: "Hyderabad",
+        destination: "Pune",
+        date_and_time: "2024-10-17 - 09:00:00",
+        category: "Appliances",
+        driver_min_star: 3,
+        trip_distance: 1200,
+    },
+    {
+        application_no: "567890",
+        pickup: "Jaipur",
+        destination: "Ahmedabad",
+        date_and_time: "2024-11-19 - 16:15:00",
+        category: "Clothing",
+        driver_min_star: 5,
+        trip_distance: 900,
+    },
+];

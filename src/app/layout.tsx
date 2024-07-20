@@ -12,10 +12,10 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
     title: {
-        default: "Saफर सathi",
-        template: "%s | Saफर सathi",
+        default: "Safar Sathi",
+        template: "%s | Safar Sathi",
     },
-    description: "Plan and manage your trips with ease.",
+    description: "Plan and manage your trips with ease on Saफर सathi",
     icons: "/images/icon.svg",
 };
 

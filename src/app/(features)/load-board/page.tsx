@@ -11,10 +11,7 @@ export default function LoadBoard() {
             <Input placeholder="Search" />
             <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-10">
                 {loads.map((load, index) => (
-                    <CardTransition
-                        key={index}
-                        delay={index < 3 ? 0.3 * index : 0}
-                    >
+                    <CardTransition key={index}>
                         <LoadCard {...load} />
                     </CardTransition>
                 ))}
