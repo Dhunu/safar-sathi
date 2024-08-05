@@ -12,7 +12,7 @@ export default function Image() {
                 style={{
                     width: "100%",
                     height: "100%",
-                    background: "/images/about-us.png",
+                    backgroundImage: "/images/about-us.png",
                 }}
             ></div>
         ),
