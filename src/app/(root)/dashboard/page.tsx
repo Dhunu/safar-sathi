@@ -26,7 +26,6 @@ export const metadata: Metadata = {
         locale: "en_IN",
         url: "https://safar-sathi.angelsaikia.com/dashboard",
         siteName: "Safar Sathi",
-        images: ["/images/dashboard.png"],
     },
 };
 
