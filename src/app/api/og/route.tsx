@@ -44,7 +44,7 @@ export async function GET(req: NextRequest) {
                 />
                 <div
                     style={{
-                        fontSize: 140,
+                        fontSize: 100,
                         fontFamily: "Outfit",
                         letterSpacing: "-0.05em",
                         fontStyle: "normal",
@@ -58,7 +58,7 @@ export async function GET(req: NextRequest) {
                 </div>
                 <div
                     style={{
-                        fontSize: 60,
+                        fontSize: 40,
                         fontFamily: "Outfit",
                         letterSpacing: "-0.05em",
                         fontStyle: "normal",

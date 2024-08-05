@@ -19,6 +19,9 @@ const title = "Dashboard - Get your current status and route";
 const description =
     "Get details about your current status and route in real-time";
 
+const openGraphTitle = "Dashboard";
+const openGraphDescription = "Get your current status and route in real-time";
+
 export async function generateMetadata(): Promise<Metadata> {
     return {
         title,
@@ -28,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
             description,
             images: [
                 {
-                    url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}&description=${description}&image=dashboard`,
+                    url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${openGraphTitle}&description=${openGraphDescription}&image=dashboard`,
                     width: 1200,
                     height: 630,
                 },

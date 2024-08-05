@@ -6,6 +6,9 @@ const title = "About Us - Know More About Saफर सathi";
 const description =
     "Saफर सathi is a tech company addressing trucking industry's issues: deadheading. Our team comprises logistics experts, software developers, and sustainability advocates.";
 
+const openGraphTitle = "About Us";
+const openGraphDescription = "Learn more about Saफर सathi and our mission.";
+
 export async function generateMetadata(): Promise<Metadata> {
     return {
         title,
@@ -15,7 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
             description,
             images: [
                 {
-                    url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}&description=${description}&image=about-us`,
+                    url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${openGraphTitle}&description=${openGraphDescription}&image=about-us`,
                     width: 1200,
                     height: 630,
                 },
