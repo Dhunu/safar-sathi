@@ -2,21 +2,29 @@ import CardTransition from "@/components/card-transition";
 import Transition from "@/components/transition";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-    metadataBase: new URL("https://safar-sathi.angelsaikia.com/about-us"),
-    title: "About Us",
-    description:
-        "Saफर सathi is a forward-thinking tech company dedicated to addressing one of the trucking industry's most pressing issues: deadheading.",
-    openGraph: {
-        title: "About Us",
-        description:
-            "Saफर सathi is a forward-thinking tech company dedicated to addressing one of the trucking industry's most pressing issues: deadheading.",
-        type: "website",
-        locale: "en_IN",
-        url: "https://safar-sathi.angelsaikia.com/about-us",
-        siteName: "Safar Sathi",
-    },
-};
+const title = "About Us - Know More About Saफर सathi";
+const description =
+    "Saफर सathi is a tech company addressing trucking industry's issues: deadheading. Our team comprises logistics experts, software developers, and sustainability advocates.";
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            images: [
+                {
+                    url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}&description=${description}&image=about-us`,
+                    width: 1200,
+                    height: 630,
+                },
+            ],
+            type: "website",
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/about-us`,
+        },
+    };
+}
 
 export default function AboutUs() {
     return (

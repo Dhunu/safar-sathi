@@ -15,19 +15,29 @@ import CardTransition from "@/components/card-transition";
 import Transition from "@/components/transition";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-    metadataBase: new URL("https://safar-sathi.angelsaikia.com/dashboard"),
-    title: "Dashboard",
-    description: "See all your details in one place",
-    openGraph: {
-        title: "Dashboard",
-        description: "See all your details in one place",
-        type: "website",
-        locale: "en_IN",
-        url: "https://safar-sathi.angelsaikia.com/dashboard",
-        siteName: "Safar Sathi",
-    },
-};
+const title = "Dashboard - Get your current status and route";
+const description =
+    "Get details about your current status and route in real-time";
+
+export async function generateMetadata(): Promise<Metadata> {
+    return {
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            images: [
+                {
+                    url: `${process.env.NEXT_PUBLIC_BASE_URL}/api/og?title=${title}&description=${description}&image=dashboard`,
+                    width: 1200,
+                    height: 630,
+                },
+            ],
+            type: "website",
+            url: `${process.env.NEXT_PUBLIC_BASE_URL}/dashboard`,
+        },
+    };
+}
 
 export default function Dashboard() {
     return (
