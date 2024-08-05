@@ -13,7 +13,7 @@ export default function Image() {
                     width: "100%",
                     height: "100%",
                     backgroundImage:
-                        "url(https://safar-sathi.angelsaikia.com/images/dashboard.png",
+                        "url(https://safar-sathi.angelsaikia.com/images/dashboard.png)",
                 }}
             ></div>
         ),
