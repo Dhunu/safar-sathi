@@ -14,7 +14,7 @@ export default function Image() {
                     height: "100%",
                     background: "/images/dashboard.png",
                 }}
-            />
+            ></div>
         ),
         { ...size }
     );
