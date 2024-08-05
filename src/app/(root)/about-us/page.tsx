@@ -3,9 +3,20 @@ import Transition from "@/components/transition";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://safar-sathi.angelsaikia.com/about-us"),
     title: "About Us",
     description:
         "Saफर सathi is a forward-thinking tech company dedicated to addressing one of the trucking industry's most pressing issues: deadheading.",
+    openGraph: {
+        title: "About Us",
+        description:
+            "Saफर सathi is a forward-thinking tech company dedicated to addressing one of the trucking industry's most pressing issues: deadheading.",
+        type: "website",
+        locale: "en_IN",
+        url: "https://safar-sathi.angelsaikia.com/about-us",
+        siteName: "Safar Sathi",
+        images: ["/images/about.png"],
+    },
 };
 
 export default function AboutUs() {

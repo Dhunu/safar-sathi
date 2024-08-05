@@ -11,12 +11,20 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://safar-sathi.angelsaikia.com"),
     title: {
         default: "Safar Sathi",
         template: "%s | Safar Sathi",
     },
     description: "Plan and manage your trips with ease on Saफर सathi",
-    icons: "/images/icon.svg",
+    openGraph: {
+        title: "Safar Sathi",
+        description: "Plan and manage your trips with ease on Saफर सathi",
+        type: "website",
+        locale: "en_IN",
+        url: "https://safar-sathi.angelsaikia.com",
+        siteName: "Safar Sathi",
+    },
 };
 
 export default function RootLayout({

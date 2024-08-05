@@ -16,8 +16,18 @@ import Transition from "@/components/transition";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
+    metadataBase: new URL("https://safar-sathi.angelsaikia.com/dashboard"),
     title: "Dashboard",
     description: "See all your details in one place",
+    openGraph: {
+        title: "Dashboard",
+        description: "See all your details in one place",
+        type: "website",
+        locale: "en_IN",
+        url: "https://safar-sathi.angelsaikia.com/dashboard",
+        siteName: "Safar Sathi",
+        images: ["/images/dashboard.png"],
+    },
 };
 
 export default function Dashboard() {
